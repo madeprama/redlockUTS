@@ -15,7 +15,6 @@
                 $db = new mysqli('databasee','root','','Redlock');
                 $query = "SELECT * FROM users";
                 $result = $db->query($query);
-                $count = 0;
                 while ($row = $result->fetch_assoc()) {
                     $count =+ 1;
                     echo "<tr>";
@@ -25,7 +24,6 @@
                     echo "<td>".$row['Jabatan']."</td>";
                     echo "</tr>";
                 }
-                echo "Result: ". "$count";
             ?>
         </tbody>
     </table>
